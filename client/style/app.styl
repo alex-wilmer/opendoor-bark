@@ -1,0 +1,108 @@
+@import 'mixins/reset.import.styl'
+@import 'jeet'
+
+reset()
+
+purple = rgb(178, 126, 231)
+
+breakpoint = 568px
+
+body {
+  font-family: 'Whitney SSm A', 'Whitney SSm B';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Chronicle SSm A', 'Chronicle SSm B';
+  font-weight: 500;
+}
+
+section.purple {
+  background-color: hsl(270, 69%, 70%);
+}
+
+p
+  margin 20px 0
+
+header
+  background purple
+  text-align center
+  height 100px
+  padding 25px 20px
+  color white
+
+.top-title
+  opacity 0.7
+  display inline-block
+  margin-top 10px
+
+.container
+  display block
+  padding 0 20px
+
+.menu-icon
+  float left
+  color white
+  font-size 2em
+
+.container
+  max-width: 1024px;
+  margin: 0 auto;
+
+.purple
+  color white
+
+  .container
+    height 810px
+    overflow hidden
+
+    +above(breakpoint)
+      height 680px
+
+  +above(breakpoint)
+    .col-7
+      col(7/12)
+
+    .col-5
+      col(5/12)
+
+  h1
+    font-size 2em
+    margin 30px 0
+
+  h2
+    font-weight 100
+    opacity 0.7
+
+    +above(breakpoint)
+      font-size: 2em;
+      line-height: 1.5;
+
+  button
+    width 100%
+
+  p
+    text-align center
+    +above(breakpoint)
+      text-align left
+
+      button
+        width 120px
+        height 45px
+        font-size 1.2em
+
+  .cellphone-dog
+    width 100%
+    margin-top 20px
+
+.desktop-sign-up
+  float right
+  +below(breakpoint)
+    display none
+
+button
+  background transparent
+  border 2px solid white
+  border-radius 4px
+  height 35px
+  padding 0 20px
+  font-size 0.8em
